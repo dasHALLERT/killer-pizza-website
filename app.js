@@ -43,7 +43,7 @@ if(stage){const chooseScene=slug=>{stage.dataset.activeScene=slug;document.query
 if(route==='ristorante'){const input=document.querySelector('#menu-search');let category='Alle';const filterMenu=()=>{let total=0;const query=input.value.trim().toLocaleLowerCase('de');document.querySelectorAll('[data-menu-category]').forEach(section=>{let count=0;section.querySelectorAll('.menu-subgroup').forEach(group=>{let groupCount=0;group.querySelectorAll('.menu-dish').forEach(dish=>{const show=(category==='Alle'||section.dataset.menuCategory===category)&&dish.dataset.menuSearch.includes(query);dish.hidden=!show;if(show){count++;groupCount++;}});group.hidden=groupCount===0;});section.hidden=count===0;total+=count;});document.querySelector('.menu-empty').hidden=total>0;};input.addEventListener('input',filterMenu);document.querySelectorAll('[data-menu-filter]').forEach(button=>button.addEventListener('click',()=>{category=button.dataset.menuFilter;document.querySelectorAll('[data-menu-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});filterMenu();}));}
 // Official YouTube embed: 1:11:42–1:14:12, muted, with an opacity fade at each loop.
 const videoFrame=document.querySelector('#hero-video-frame');
-if(videoFrame){
+if(videoFrame && !matchMedia('(max-width: 760px)').matches){
  const START=4302,END=4452,FADE=1100;let player,looping=false,paused=false,everPlayed=false;
  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
  const toggle=document.querySelector('.motion-toggle');
