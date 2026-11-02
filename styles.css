@@ -52,3 +52,5 @@
 
 /* Match the original shop card crop, including the close landscape framing. */
 .menu-dish .dish-image{aspect-ratio:1000/541}.menu-dish .dish-image img{object-fit:cover}
+
+.dish-image.product-photo img{object-fit:contain;background:var(--bg)}.dish-details .dish-variants{font-size:11px;line-height:1.6}
