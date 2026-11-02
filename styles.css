@@ -32,3 +32,23 @@
 
 /* Mobile uses the local poster instead of loading the YouTube player. */
 @media(max-width:760px){.video-frame,.motion-toggle{display:none}.scene-poster{opacity:1}}
+
+/* Original shop photographs and the complete Afterdark catalogue. */
+.menu-dish .dish-image img{object-fit:contain}
+.price-group>div{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.price-item{display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:0 0 18px;background:var(--panel);border:1px solid #353533;overflow:hidden}
+.price-photo{display:block;width:100%;aspect-ratio:1;object-fit:contain;background:#fff}
+.price-item>div,.price-item>strong{margin:0 16px}.price-item>strong{margin-top:auto}.price-item h4{font-size:15px;line-height:1.4}.price-item p{font-size:12px;line-height:1.6}
+@media(min-width:1600px){.price-group>div{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:1099px){.price-group>div{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.price-group>div{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.price-item>div,.price-item>strong{margin-left:12px;margin-right:12px}.price-item h4{font-size:14px}}
+.price-group{display:block}.price-group>h3{margin-bottom:24px;display:flex;justify-content:space-between}.price-photo{aspect-ratio:3/2;background:#1b1b1a}
+.menu-dish:not(:has(.dish-image)){min-height:180px}
+@media(max-width:559px){.menu-dish:not(:has(.dish-image)){display:block;min-height:0}}
+.price-group>h3{position:static}
+
+/* Match the original shop card crop, including the close landscape framing. */
+.menu-dish .dish-image{aspect-ratio:1000/541}.menu-dish .dish-image img{object-fit:cover}
+
+/* Match the original shop card crop, including the close landscape framing. */
+.menu-dish .dish-image{aspect-ratio:1000/541}.menu-dish .dish-image img{object-fit:cover}
