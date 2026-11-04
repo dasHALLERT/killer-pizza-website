@@ -54,3 +54,15 @@
 .menu-dish .dish-image{aspect-ratio:1000/541}.menu-dish .dish-image img{object-fit:cover}
 
 .dish-image.product-photo img{object-fit:contain;background:var(--bg)}.dish-details .dish-variants{font-size:11px;line-height:1.6}
+
+/* Each service has its own catalogue; Afterdark hours use a single age badge. */
+.price-photo{object-fit:cover}
+.afterdark-schedule{display:flex;align-items:center;gap:30px;margin-top:28px;max-width:760px}
+.afterdark-schedule .afterdark-hours{display:block;flex:1;margin:0;padding:20px 24px;max-width:none}
+.afterdark-hours p{display:flex;flex-wrap:wrap;gap:5px 20px;align-items:baseline;justify-content:space-between;margin:0;font-size:14px;line-height:1.6}
+.afterdark-hours p+p{margin-top:14px;padding-top:14px;border-top:1px solid #ffffff26}
+.afterdark-hours p>span:last-child{font-size:16px;font-weight:600;white-space:nowrap}
+.afterdark-hours .weekend-hours strong{font-size:18px;letter-spacing:0;line-height:1.5;color:var(--red)}
+.age-stamp{display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;width:112px;height:112px;border-radius:50%;background:var(--red);outline:1px solid var(--white);outline-offset:4px;transform:rotate(10deg);font-size:11px;font-weight:800;line-height:1.3;text-align:center;box-shadow:0 6px 28px #0004}
+.age-stamp strong{font-size:25px;line-height:1.2}
+@media(max-width:760px){.afterdark-schedule{gap:22px;align-items:flex-start;flex-wrap:wrap}.afterdark-schedule .afterdark-hours{flex-basis:100%;padding:18px}.afterdark-hours p{flex-direction:column;gap:3px;font-size:13px}.afterdark-hours .weekend-hours strong{font-size:17px}.age-stamp{width:92px;height:92px;font-size:10px;margin:0 10px 10px auto}.age-stamp strong{font-size:22px}}
